@@ -43,35 +43,35 @@ def laplacenet():
 
 	#%%
 	for epoch in range(args.epochs):
-	    start_epoch_time = time.time()
+            start_epoch_time = time.time()
 	    #### Extract features and run label prop on graph laplacian
-	    if epoch >= 10:
-		dataset.feat_mode = True
-		feats = helpers.extract_features_simp(train_loader_noshuff,model,args)  
-		dataset.feat_mode = False          
-		dataset.one_iter_true(feats,k = args.knn, max_iter = 30, l2 = True , index="ip") 
+            if epoch >= 10:
+                dataset.feat_mode = True
+                feats = helpers.extract_features_simp(train_loader_noshuff,model,args)  
+                dataset.feat_mode = False          
+                dataset.one_iter_true(feats,k = args.knn, max_iter = 30, l2 = True , index="ip") 
 		
 	    #### Supervised Initilisation vs Semi-supervised main loop
-	    start_train_time = time.time()  
-	    if epoch < 10:
-		print("Supervised Initilisation:", (epoch+1), "/" , 10 )
-		for i in range(10):
-		    global_step = helpers.train_sup(train_loader, model, optimizer, epoch, global_step, args)                     
-	    if epoch >= 10:
-		    global_step = helpers.train_semi(train_loader_l, train_loader_u, model, optimizer, epoch, global_step, args)  
+            start_train_time = time.time()  
+            if epoch < 10:
+                print("Supervised Initilisation:", (epoch+1), "/" , 10 )
+                for i in range(10):
+                    global_step = helpers.train_sup(train_loader, model, optimizer, epoch, global_step, args)                     
+                if epoch >= 10:
+                    global_step = helpers.train_semi(train_loader_l, train_loader_u, model, optimizer, epoch, global_step, args)  
 
-	    end_train_time = time.time()
-	    print("Evaluating the primary model:", end=" ")
-	    prec1, prec5 = helpers.validate(eval_loader, model, args, global_step, epoch + 1, num_classes = args.num_classes)
+            end_train_time = time.time()
+            print("Evaluating the primary model:", end=" ")
+            prec1, prec5 = helpers.validate(eval_loader, model, args, global_step, epoch + 1, num_classes = args.num_classes)
 
-	    epoch_results[epoch,0] = epoch
-	    epoch_results[epoch,1] = prec1
-	    epoch_results[epoch,2] = prec5 
-	    epoch_results[epoch,3] = dataset.acc
-	    epoch_results[epoch,4] = time.time() - start_epoch_time
-	    epoch_results[epoch,5] = end_train_time - start_train_time
+            epoch_results[epoch,0] = epoch
+            epoch_results[epoch,1] = prec1
+            epoch_results[epoch,2] = prec5 
+            epoch_results[epoch,3] = dataset.acc
+            epoch_results[epoch,4] = time.time() - start_epoch_time
+            epoch_results[epoch,5] = end_train_time - start_train_time
 		
-	    np.savetxt(args.file,epoch_results)
+            np.savetxt(args.file,epoch_results)
 
 
 
