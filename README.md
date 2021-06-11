@@ -87,5 +87,5 @@ There are some graph based parameters which we do not offer as cli arguments, th
 
 ## Maintenance
 
-I will try my best to keep this github up to date. If you find a bug or want to make a comment please feel free to do so and I will try my best to get to you quickly
+I will try my best to keep this github up to date. If you find a bug or want to make a comment please feel free to do so and I will try my best to resolve your problem quickly
 Additionally I aim, if my PhD time allows, to add to this github with distributed training etc. 
