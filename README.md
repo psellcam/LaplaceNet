@@ -63,8 +63,15 @@ To recreate the miniimagenet results from the main paper for 4k labels (for any 
 
 ## Command line arguments
 
-The documentation for the command line arguments can be found in config/cli.py. Here we give some extra information.
+The documentation for the command line arguments can be found in config/cli.py. Here we give some extra information on the most important ones.
 
-- --dataset. Current available options are cifar10 cifar100 and miniimagenet. If you want to install your own dataset you would need to add the relevant images and label information to the data-local folder, then updatae the config/datasets.py folder to include your new dataset and then finally change the load_args function in the load_args function. 
-- 
-- Model. Current avaiable options
+- --dataset : Current available options are cifar10, cifar100 and miniimagenet. If you want to add your own dataset you would need to add the relevant images and label information to the data-local folder in the same format as the other datasets, then you will need to update the config/datasets.py folder to include your new dataset and then finally change the load_args function in the helpers.py. You may potentially need to change the --train-subdir and --eval-subdir options as well to make sure you are pointing to the right folders. 
+
+- --model : Current avaiable options are resnet18, resnet50, wrn-28-2, wrn-28-8 and a 13-cnn. If you want to add your own custom model you would need to add the code to the models subfolder, update the init and then add your model as an option to the create-model function in helpers.py
+
+- --label-split : For a fair comparison we use the same label splits as past works, these are numbered from 0 to 20 for each differing label amount. This label split is then used in the create_data_loaders_simple function in helpers.py where it is sent to the custom dataset class db_semisuper. For some data sets it may make more sense to generate such splits on the fly by changing the relabel dataset function of the db_semisuper class found in the lp folder but to steal a phrase "I will leave this as an exercise to the reader".
+
+- --aug-num : This sets the number of augmentation samples per point as dicussed in the main paper. We fill a value of 3 or 5 is best in most cases.
+
+
+## General Bits and Bobs
