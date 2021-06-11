@@ -48,6 +48,8 @@ From a clean conda enviroment you can perform the following commands to get a su
 - conda install -c conda-forge tqdm 
 - pip install torchnet 
 
+Note that faiss-gpu has some compatibaility issues with certain versions of pytorch but the combination above is certified to work
+
 ## Running the program
 To recreate the cifar-10 results from the main paper for 4k labels (for any label split)  you can run 
 
