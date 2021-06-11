@@ -12,6 +12,8 @@ Download this repository into some folder, extract the data files, set up the en
 
 ## Data Extraction
 
+Run these commands to extract the data for CIFAR-10/100 , starting from the base path you installed the repo to.
+
 ### CIFAR-10
 ```
 >> cd data-local/bin
