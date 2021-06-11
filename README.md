@@ -8,7 +8,7 @@ This code follows from prior work by https://github.com/CuriousAI/mean-teacher/t
 
 
 # Using this repository
-This repository contains all the information you would need to recreate the experiments from our paper and use our code. After downloading and extracting this repository you need to extract the data files, set up a suitable environment and then you can run the code. We gives a guide on doing so below
+This repository contains all the information you would need to recreate the experiments from our paper and use our code. After downloading and extracting this repository you need to extract the data files, set up a suitable environment and then you can run the code. We give a guide on doing so below
 
 ## Data Extraction
 
