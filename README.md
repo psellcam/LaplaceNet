@@ -39,6 +39,7 @@ Requirements
 - cuda 10.2
 - scipy 1.6.2
 - tqdm 4.61.0
+- numpy
 
 From a clean conda enviroment you can perform the following commands to get a suitable enviroment
 - conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch 
