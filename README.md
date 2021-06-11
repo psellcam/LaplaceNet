@@ -78,8 +78,6 @@ The documentation for the command line arguments can be found in config/cli.py. 
 - --aug-num : This sets the number of augmentation samples per point as dicussed in the main paper. We fill a value of 3 or 5 is best in most cases.
 
 
-## General Bits and Bobs
-
 There are some graph based parameters which we do not offer as cli arguments, these make be changed directly but I don't recommned doing so unless you have a good reason in mind. If you want to try another graph based approach or any propogator then you would need to rewrite the one_iter_true function in db_semisuper.py and replace it with whatever you liked.
 
 
