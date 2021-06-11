@@ -27,7 +27,7 @@ Run these commands to extract the data for CIFAR-10/100 , starting from the base
 ```
 
 ### Mini-Imagenet
-We use what ahmetius's did and you can download the train and test tars from  http://ptak.felk.cvut.cz/personal/toliageo/share/lpdeep/ and extract them in the following directory 
+We use ahmetius's approach meaning thatyou can download the train and test tars from  http://ptak.felk.cvut.cz/personal/toliageo/share/lpdeep/ and extract them in the following directory 
 ```
 >> ./data-local/images/miniimagenet/
 ```
