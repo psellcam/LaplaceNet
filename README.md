@@ -23,7 +23,8 @@ Download this repository into some folder
 ```
 
 ### Mini-Imagenet
-We took the Mini-Imagenet dataset hosted in [this repository](https://github.com/gidariss/FewShotWithoutForgetting) and pre-processed it.
-Download [train.tar.gz](http://ptak.felk.cvut.cz/personal/toliageo/share/lpdeep/train.tar.gz) and [test.tar.gz](http://ptak.felk.cvut.cz/personal/toliageo/share/lpdeep/test.tar.gz), and extract them in the following directory:
+We use what ahmetius's did and you can download the train and test tars from  http://ptak.felk.cvut.cz/personal/toliageo/share/lpdeep/ and extract them in the following directory 
 ```
 >> ./data-local/images/miniimagenet/
+
+## Setting Up Environment 
