@@ -53,16 +53,17 @@ Note that faiss-gpu has some compatibaility issues with certain versions of pyto
 ## Running the program
 To recreate the cifar-10 results from the main paper for 4k labels (for any label split)  you can run 
 
-> python main.py --dataset cifar10 --model wrn-28-2 --num-labeled 4000 --alpha 1.0 --lr 0.03 --labeled-batch-size 48 --batch-size 300 --aug-num 3 --label-split 12 --progress True
+> python main.py --dataset cifar10 --model wrn-28-8 --num-labeled 4000 --alpha 1.0 --lr 0.03 --labeled-batch-size 48 --batch-size 300 --aug-num 3 --label-split 12 --progress True
 
 To recreate the cifar-100 results from the main paper for 10k labels (for any label split)  you can run 
 
-> python main.py --dataset cifar100 --model wrn-28-2 --num-labeled 10000 --alpha 0.5 --lr 0.03 --labeled-batch-size 50 --aug-num 3 --label-split 12 --progress True
+> python main.py --dataset cifar100 --model wrn-28-8 --num-labeled 10000 --alpha 0.5 --lr 0.03 --labeled-batch-size 50 --aug-num 3 --label-split 12 --progress True
 
 To recreate the miniimagenet results from the main paper for 4k labels (for any label split)  you can run 
 
 > python main.py --dataset miniimagenet --model resnet18 --num-labeled 4000 --alpha 0.5 --lr 0.1 --labeled-batch-size 50 --aug-num 3 --label-split 12 --progress True
 
+Increasing --aug-num should give better performance at a cost to computational performance.
 
 ## Command line arguments
 
@@ -87,4 +88,4 @@ There are some graph based parameters which we do not offer as cli arguments, th
 ## Maintenance
 
 I will try my best to keep this github up to date. If you find a bug or want to make a comment please feel free to do so and I will try my best to get to you quickly
-
+Additionally I aim, if my PhD time allows, to add to this github with distributed training etc. 
