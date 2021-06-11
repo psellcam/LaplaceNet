@@ -6,9 +6,9 @@ This code follows from prior work by https://github.com/CuriousAI/mean-teacher/t
 
 
 # Using this repository
-Download this repository into some folder
+Download this repository into some folder, extract the data files, set up the environment and then you are good to go.
 
-## Data Preprocess
+## Data Extraction
 
 ### CIFAR-10
 ```
@@ -42,3 +42,9 @@ From a clean conda enviroment you can perform the following commands to get a su
 - conda install -c anaconda scipy 
 - conda install -c conda-forge tqdm 
 - pip install torchnet 
+
+## Running the program
+To recreate the cifar-10 results from the main paper you can run
+
+> python main.py -dataset cifar10 --model wrn-28-2 --num-labeled 4000 --alpha 1.0 --lr 0.03 --labeled-batch-size 48 --batch-size 300 --aug-num 3 --label-split 12 --progress True
+
