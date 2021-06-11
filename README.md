@@ -10,3 +10,20 @@ Download this repository into some folder
 
 ## Data Preprocess
 
+### CIFAR-10
+```
+>> cd data-local/bin
+>> ./prepare_cifar10.sh
+```
+
+### CIFAR-100
+```
+>> cd data-local/bin
+>> ./prepare_cifar100.sh
+```
+
+### Mini-Imagenet
+We took the Mini-Imagenet dataset hosted in [this repository](https://github.com/gidariss/FewShotWithoutForgetting) and pre-processed it.
+Download [train.tar.gz](http://ptak.felk.cvut.cz/personal/toliageo/share/lpdeep/train.tar.gz) and [test.tar.gz](http://ptak.felk.cvut.cz/personal/toliageo/share/lpdeep/test.tar.gz), and extract them in the following directory:
+```
+>> ./data-local/images/miniimagenet/
