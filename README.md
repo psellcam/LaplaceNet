@@ -61,3 +61,10 @@ To recreate the miniimagenet results from the main paper for 4k labels (for any 
 > python main.py --dataset miniimagenet --model resnet18 --num-labeled 4000 --alpha 0.5 --lr 0.1 --labeled-batch-size 50 --aug-num 3 --label-split 12 --progress True
 
 
+## Command line arguments
+
+The documentation for the command line arguments can be found in config/cli.py. Here we give some extra information.
+
+- --dataset. Current available options are cifar10 cifar100 and miniimagenet. If you want to install your own dataset you would need to add the relevant images and label information to the data-local folder, then updatae the config/datasets.py folder to include your new dataset and then finally change the load_args function in the load_args function. 
+- 
+- Model. Current avaiable options
