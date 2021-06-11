@@ -46,5 +46,5 @@ From a clean conda enviroment you can perform the following commands to get a su
 ## Running the program
 To recreate the cifar-10 results from the main paper you can run
 
-> python main.py -dataset cifar10 --model wrn-28-2 --num-labeled 4000 --alpha 1.0 --lr 0.03 --labeled-batch-size 48 --batch-size 300 --aug-num 3 --label-split 12 --progress True
+> python main.py --dataset cifar10 --model wrn-28-2 --num-labeled 4000 --alpha 1.0 --lr 0.03 --labeled-batch-size 48 --batch-size 300 --aug-num 3 --label-split 12 --progress True
 
