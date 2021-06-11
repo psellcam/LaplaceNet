@@ -37,8 +37,8 @@ Requirements
 - tqdm 4.61.0
 
 From a clean conda enviroment you can perform the following commands to get a suitable enviroment
-> conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch
-> conda install -c pytorch faiss-gpu
-> conda install -c anaconda scipy
-> conda install -c conda-forge tqdm
-> pip install torchnet
+> conda install pytorch torchvision torchaudio cudatoolkit=10.2 -c pytorch \\
+> conda install -c pytorch faiss-gpu \\
+> conda install -c anaconda scipy \\ 
+> conda install -c conda-forge tqdm \\
+> pip install torchnet \\
