@@ -57,8 +57,8 @@ def laplacenet():
                 print("Supervised Initilisation:", (epoch+1), "/" , 10 )
                 for i in range(10):
                     global_step = helpers.train_sup(train_loader, model, optimizer, epoch, global_step, args)                     
-                if epoch >= 10:
-                    global_step = helpers.train_semi(train_loader_l, train_loader_u, model, optimizer, epoch, global_step, args)  
+            if epoch >= 10:
+                global_step = helpers.train_semi(train_loader_l, train_loader_u, model, optimizer, epoch, global_step, args)  
 
             end_train_time = time.time()
             print("Evaluating the primary model:", end=" ")
