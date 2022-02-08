@@ -47,6 +47,7 @@ From a clean conda enviroment you can perform the following commands to get a su
 - conda install -c anaconda scipy 
 - conda install -c conda-forge tqdm 
 - pip install torchnet 
+- pip install matplotlib
 
 Note that faiss-gpu has some compatibaility issues with certain versions of pytorch but the combination above is certified to work
 
